@@ -106,6 +106,28 @@
   font-weight: 300;
 }
 
+/* Top Right Transparent contact me - rgba(0,0,0,0.5)*/
+.top-contact-link {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 15px;
+  color: cyan;
+  text-decoration: none;
+  z-index: 2000;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid cyan;
+  transition: .3s;
+}
+
+.top-contact-link:hover {
+  transform: scale(1.08);
+  color: #00ffff;
+}
+
 body {
     background: #000;
     color: white;
@@ -261,6 +283,13 @@ footer {
 <div class="stars2"></div>
 <div class="stars3"></div>
 
+<a href="#footer-contact" class="top-contact-link">Contact Me</a>
+
+<section class="hero">
+    <h1>Business Presentation Collection</h1>
+    <p class="lead">PowerPoint • WPS Office • Canva</p>
+</section>
+
 <!-- Date-Time-Status display -->
 <div class="rt-date-time">
   <div id="current-date"></div>
@@ -295,18 +324,13 @@ footer {
   updateDateTime();
 </script>
 
-<section class="hero">
-    <h1>Business Presentation Portfolio</h1>
-    <p class="lead">PowerPoint • WPS Office • Canva</p>
-</section>
-
 <h2 class="section-title">Visual Presentation & Slide Decks<span><img src="images/WPS.svg" alt="Projects" style="width:50px"></span></h2>
 
 <div class="container">
     <div class="row g-4 text-center" id="projects"></div>
 </div>
 
-<footer>
+<footer id="footer-contact">
     <h4>Contact Me</h4>
     <div class="social-icons">
 
@@ -358,9 +382,9 @@ footer {
 <!-- contact me icon end -->
    
 <!-- marquee tag on privacy policy -->
-<marquee direction="left" scrollamount="16">
+<marquee direction="left" scrollamount="10">
   <p style="font-weight: 300; font-size: 20px; 
-      background: linear-gradient(90deg, purple, orange, red, green, aqua, magenta);
+      background: linear-gradient(90deg, #007bff, #6a0dad);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
@@ -483,7 +507,7 @@ dashboardData.forEach(item => {
                 <div class="p-3">
                     <h5>${item.title}</h5>
                     <a href="${item.link}" class="btn btn-outline-info mt-2" download target="_blank">
-                       Download Presentation ⬇ 
+                       View Presentation ⬇ 
                     </a>
                 </div>
             </div>
@@ -514,181 +538,3 @@ for (let i = 0; i < particleCount; i++) {
 
 </body>
 </html>
-
-<!-- <script>
-const dashboardData = [
-    {
-        title: "Sales Dashboard - Excel",
-        img: "images/sales_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/sales-dashboard"
-    },
-    {
-        title: "Marketing Dashboard - Power BI",
-        img: "images/marketing_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/marketing-dashboard"
-    },
-    {
-        title: "Financial Dashboard - Tableau",
-        img: "images/financial_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/financial-dashboard"
-    },
-    {
-        title: "HR Dashboard - Excel",
-        img: "images/hr_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/hr-dashboard"
-    },
-    {
-        title: "IT Dashboard - Power BI",
-        img: "images/it_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/it-dashboard"
-    },
-    {
-        title: "Operations Dashboard - Tableau",
-        img: "images/operations_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/operations-dashboard"
-    },
-    {
-        title: "Finance Dashboard - Excel",
-        img: "images/finance_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/finance-dashboard"
-    },
-    {
-        title: "Marketing Trends - Power BI",
-        img: "images/marketing_trends.jpg",
-        link: "https://github.com/rajeevtiwari8055/marketing-trends"
-    },
-    {
-        title: "Sales Analysis - Tableau",
-        img: "images/sales_analysis.jpg",
-        link: "https://github.com/rajeevtiwari8055/sales-analysis"
-    },
-    {
-        title: "Project Dashboard - Excel",
-        img: "images/project_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/project-dashboard"
-    },
-    {
-        title: "Customer Dashboard - Power BI",
-        img: "images/customer_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/customer-dashboard"
-    },
-    {
-        title: "Analytics Dashboard - Tableau",
-        img: "images/analytics_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/analytics-dashboard"
-    },
-    {
-        title: "Inventory Dashboard - Excel",
-        img: "images/inventory_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/inventory-dashboard"
-    },
-    {
-        title: "Logistics Dashboard - Power BI",
-        img: "images/logistics_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/logistics-dashboard"
-    },
-    {
-        title: "Performance Dashboard - Tableau",
-        img: "images/performance_dashboard.jpg",
-        link: "https://github.com/rajeevtiwari8055/performance-dashboard"
-    }
-];
-
-const container = document.getElementById("projects");
-
-dashboardData.forEach(item => {
-    container.innerHTML += `
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="${item.img}" class="card-img-top">
-                <div class="p-3">
-                    <h5>${item.title}</h5>
-                    <a href="${item.link}" class="btn btn-outline-info mt-2" target="_blank">
-                        View Repository
-                    </a>
-                </div>
-            </div>
-        </div>
-    `;
-});
-</script> 
-
-
-Dashboard Portfolio – Excel, Power BI & Tableau ✅ (Professional + skill mention)
-
-Interactive Dashboard Collection
-
-Data Visualization Portfolio
-
-Business & Analytics Dashboards
-
-My Dashboard Projects (Simple & clear)
-
-const dashboardData = Array.from({length: 15}, (_, i) => ({
-    title: `Dashboard Project ${i+1}`,
-    img: `https://source.unsplash.com/random/400x300?analytics,${i}`,
-    link: "https://github.com/rajeevtiwari8055"
-}));    
-
-
-
-# Interactive Dashboard Portfolio
-
-A **collection of interactive dashboards** built using **Excel, Power BI, and Tableau**, showcasing **data visualization and analytics projects**.  
-This portfolio highlights professional and business-oriented dashboards, including sales, marketing, retail, hospital, and e-commerce insights.  
-
-## 🌟 Features & Highlights
-
-- **Responsive Design**: Fully mobile-friendly and desktop-optimized using **Bootstrap 5**.
-- **Dashboard Cards**: Each project has a card with:
-  - Project title
-  - Dashboard screenshot
-  - Link to the GitHub repository
-- **Hover Effects**: Smooth card hover scaling and glowing effects for a modern UI.
-- **Interactive Particle Background**: Full-page floating particle animation for a dynamic look.
-- **Twinkling Stars Animation**: Background galaxy effect with multiple layers for depth.
-- **Hero Section**: Clean hero section highlighting Excel, Power BI, and Tableau dashboards.
-- **Contact Footer**:
-  - Social links: LinkedIn, GitHub, Telegram, Twitter/X, Website, Email
-  - Gradient hover effects for each icon
-- **Real-Time Date & Time Display**: Top-right corner displays current date and live updating time.
-- **Marquee for Terms & Privacy**: Moving gradient text for added style.
-
-## 🛠️ Technologies Used
-
-- **HTML5 & CSS3**: Modern structure and styling with gradients and glassmorphism effects.
-- **JavaScript**:
-  - Dynamic project rendering from JSON array
-  - Particle animation effect
-  - Real-time date and time update
-- **Bootstrap 5**: Grid layout and responsiveness
-- **FontAwesome**: Professional social media and contact icons
-
-## 📂 Projects Included
-
-- Nescafe Driving Coffee Sales Excellence
-- Food Delivery Performance Analytics
-- Blinkit Grocery Dashboard Analysis
-- Amazon Global Business Analytics
-- Motorola Sales Dashboard Analysis
-- Power BI Analytics Dashboard Project
-- Hospital Emergency Room Dashboard
-- Road Accident Analysis Dashboard
-- Retail Sales Dashboard Analysis
-- E-commerce Sales Dashboard Analysis
-- HSBC Strategic Stakeholder Intelligence
-- HR Attrition Insights Dashboard
-
-> A full **portfolio of interactive dashboards**, ready to showcase your analytics and business intelligence skills.
-
-## 📌 How to Use
-
-1. Clone or download this repository.
-2. Open `index.html` in a browser.
-3. Explore the interactive dashboards and animations.
-4. Click **View Repository** buttons on each card to visit the project source on GitHub.
-
----
-
--->
-
